@@ -332,7 +332,7 @@
             <div class="relative h-48 md:h-72 shrink-0">
                 <img id="modalImg" src="" class="w-full h-full object-cover transition-all duration-300"
                     alt="Cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+                <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white to-transparent"></div>
             </div>
 
             <div id="modalGallery"
