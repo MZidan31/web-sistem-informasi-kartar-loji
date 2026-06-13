@@ -23,8 +23,3 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 
-# Setup and Test Scripts
-update_users.php
-update_dummy.php
-update_db_roles.php
-test_chart.php
