@@ -329,10 +329,10 @@
                 </svg>
             </button>
 
-            <div class="relative h-48 md:h-72 shrink-0">
-                <img id="modalImg" src="" class="w-full h-full object-cover transition-all duration-300"
+            <div class="relative shrink-0 bg-gray-100 flex flex-col rounded-t-[2rem] overflow-hidden">
+                <img id="modalImg" src="" class="w-full h-auto max-h-[60vh] object-contain transition-all duration-300"
                     alt="Cover">
-                <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white to-transparent"></div>
+                <div class="w-full h-16 bg-gradient-to-b from-gray-100 to-white"></div>
             </div>
 
             <div id="modalGallery"
