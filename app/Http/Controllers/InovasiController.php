@@ -13,13 +13,11 @@ class InovasiController extends Controller
         $inovasis = Inovasi::with(['user', 'fotoInovasis'])
             ->where('status', 'disetujui')
             ->orderBy('created_at', 'desc')
-            ->take(3)
             ->get();
 
         $kegiatans = Kegiatan::with(['user', 'fotoKegiatans'])
             ->where('status', 'disetujui')
             ->orderBy('created_at', 'desc')
-            ->take(3)
             ->get();
 
         // 2. Lempar data murni lokal ke View

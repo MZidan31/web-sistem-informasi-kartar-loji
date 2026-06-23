@@ -91,6 +91,7 @@ class InovasiResource extends Resource
                     ->required()
                     ->native(false)
                     ->columnSpan(4)
+                    ->live()
                     ->disabled(fn() => auth()->user()->role !== 'admin'),
 
                 Forms\Components\Textarea::make('catatan')
@@ -98,6 +99,7 @@ class InovasiResource extends Resource
                     ->placeholder('Belum ada catatan...')
                     ->columnSpan(8)
                     ->rows(3)
+                    ->required(fn ($get) => $get('status') === 'ditolak')
                     ->disabled(fn() => auth()->user()->role !== 'admin'),
             ])
             ->columns(12);

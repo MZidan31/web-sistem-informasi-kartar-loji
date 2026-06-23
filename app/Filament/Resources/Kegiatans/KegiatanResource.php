@@ -101,6 +101,7 @@ class KegiatanResource extends Resource
                     ->required()
                     ->native(false)
                     ->columnSpan(4)
+                    ->live()
                     ->disabled(fn() => auth()->user()->role !== 'admin'),
 
                 Forms\Components\Textarea::make('catatan')
@@ -108,6 +109,7 @@ class KegiatanResource extends Resource
                     ->placeholder('Berikan alasan penolakan atau catatan tambahan...')
                     ->columnSpan(8)
                     ->rows(3)
+                    ->required(fn ($get) => $get('status') === 'ditolak')
                     ->disabled(fn() => auth()->user()->role !== 'admin'),
             ])
             ->columns(12);
